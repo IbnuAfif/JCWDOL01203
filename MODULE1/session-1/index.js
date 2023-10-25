@@ -109,3 +109,4 @@ console.log(n);
 console.log(++n);
 
 console.log(3 > 5);
+console.log(15 < 90);
