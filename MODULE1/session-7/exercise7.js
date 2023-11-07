@@ -1,3 +1,5 @@
+const { findIndex } = require("../../Additional/data");
+
 function findDifference(obj1, obj2) {
   let longobj =
     Object.keys(obj1).length > Object.keys(obj2).length ? obj1 : obj2;
@@ -31,24 +33,20 @@ let obj4 = { e: 9, a: 10, c: 3, b: 5, f: 10 };
 console.log(intesectionObj(obj3, obj4));
 
 function mergeArrayObject(arr1, arr2) {
-  let result = [arr1[0]];
-  //console.log(result);
+  for (let i = 0; i < arr1.length; i++) {
+    let flag = true;
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr1[i].name == arr2[j].name && arr1[i].email == arr2[j].email) {
+        flag = false;
+        break;
+      }
+    }
+    if (flag) {
+      arr2.push(arr1[i]);
+    }
+  }
 
-  //   for (let i = 0; i < result.length; i++) {
-  //     for (let j = 0; j < arr1.length; j++) {
-  //       if (result[i].name !== arr1[j].name) {
-  //         result.push(arr1[j]);
-  //       }
-  //     }
-
-  //     for (let k = 0; k < arr2.length; k++) {
-  //       if (result[i].name !== arr2[k].name) {
-  //         result.push(arr1[k]);
-  //       }
-  //     }
-  //   }
-
-  return result;
+  return arr2;
 }
 
 const arr1 = [
@@ -57,6 +55,7 @@ const arr1 = [
 ];
 
 const arr2 = [
+  { name: "Student 4", email: "student4@mail.com" },
   { name: "Student 1", email: "student1@mail.com" },
   { name: "Student 3", email: "student3@mail.com" },
 ];
