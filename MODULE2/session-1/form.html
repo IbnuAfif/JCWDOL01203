@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> My First Web Page</title>
+</head>
+
+<body>
+    <h1> Form </h1>
+    <hr>
+    <a href="./index.html"> Home </a>
+    &nbsp;
+    <a href="./service.html"> Service </a>
+    &nbsp;
+    <a href="./form.html"> Form </a>
+    <hr>
+    <form action="./form.html" method="post">
+        <fieldset>
+            <legend> Profile </legend>
+            <p>
+                <label> Name : </label><br>
+                <input type="text" name="name" />
+            </p>
+            <p>
+                <label> Email : </label><br>
+                <input type="email" name="email" />
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend> Additional Info </legend>
+            <label> Games : </label><br>
+            <select>
+                <option> -- Please Select Game --</option>
+                <option> Genshin Impact</option>
+                <option> Rocket League </option>
+            </select>
+            <br>
+            <label> Date : </label><br>
+            <input type="date" /> <br>
+            <label> Color : </label><br>
+            <input type="color" name="color" />
+        </fieldset>
+        <button type="button" onClick="alert('hello')"> Hello </button>
+        <button type="submit"> Submit </button>
+    </form>
+
+    <hr>
+    <p align="center"> Yudhistira media &copy 2023 </p>
+</body>
+
+</html>
