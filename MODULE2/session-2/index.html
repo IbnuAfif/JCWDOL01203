@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance CSS</title>
+    <style>
+        body {
+            height: 2000px;
+            padding: 50px 0 0 0;
+        }
+
+        div.static {
+            position: static;
+            border: 3px solid #73AD21;
+            width: 300px;
+            height: 300px;
+        }
+
+        div.relative {
+            position: relative;
+            left: 30px;
+            border: 3px solid red;
+            width: 300px;
+            height: 300px;
+        }
+
+        div.absolute {
+            position: absolute;
+            top: 80px;
+            right: 0;
+            width: 280px;
+            height: 180px;
+            border: 3px solid green;
+        }
+
+        div.fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            border: 3px solid chocolate;
+            background-color: cadetblue;
+        }
+
+        #grad1 {
+            height: 200px;
+            background-image: linear-gradient(red, green);
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+            div.fixed {
+                background-color: brown;
+            }
+        }
+
+        @media screen and (min-width: 481px) and (max-width: 768px) {
+            div.fixed {
+                background-color: cornflowerblue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Position: static</h2>
+    <p>here is static example</p>
+    <div class="static">
+        this div element has position : static
+
+    </div>
+    <div class="relative">
+        relative
+    </div>
+    <div class="absolute">
+        absolute
+    </div>
+    <div class="fixed">
+        fixed
+    </div>
+    <div id="grad1">
+
+    </div>
+
+
+</body>
+
+</html>
